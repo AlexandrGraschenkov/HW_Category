@@ -12,24 +12,27 @@
 
 - (NSInteger)countNSStringElements {
     NSInteger res = 0;
-    for (NSString *str in self) {
-        res++;
+    for (id obj in self) {
+        if ([obj isKindOfClass:[NSString class]]) res++;
     }
     return res;
 }
 
 - (NSString *)concatAllStringsInArray {
     NSString *result = @"";
-    for (NSString *str in self) {
-        result = [result stringByAppendingString:str];
+   for (id obj in self) {
+       if ([obj isKindOfClass:[NSString class]]) result = [result stringByAppendingString:obj];
     }
     return result;
 }
 
 - (NSNumber *)maxNumberInArray {
-    NSNumber *maxNumber = [self objectAtIndex:0];
-    for (NSNumber *num in self) {
-        if (num > maxNumber) maxNumber = num;
+    NSNumber *maxNumber = nil;
+    for (id obj in self) {
+        if ([obj isKindOfClass:[NSNumber class]]) {
+            if (maxNumber == nil) maxNumber = obj;
+            if ([obj compare:maxNumber] == 1) maxNumber = obj;
+        }
     }
     return maxNumber;
     
@@ -38,9 +41,9 @@
 // результат = элементы, которые есть в первом массиве, но нет во втором
 - (NSArray *)substractArray:(NSArray *)arr {
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    for (NSObject *array1 in self) {
+    for (id array1 in self) {
         BOOL check = NO;
-        for (NSObject *array2 in arr) {
+        for (id array2 in arr) {
             if ([array1 isEqual:array2]) check = true;
         }
         if (!check) [result addObject:array1];
@@ -53,13 +56,13 @@
 // from:10 to:8 => @[@10, @9, @8]
 + (NSArray *)numbersFrom:(NSInteger)fromVal toValue:(NSInteger)toValue {
     NSMutableArray *result = [[NSMutableArray alloc] init];
-    if (toValue >= fromVal) {
+    if (toValue > fromVal) {
         for (int i = fromVal; i <= toValue; i++) {
-            [result addObject: [NSString stringWithFormat:@"%d", i]];
+            [result addObject:[NSNumber numberWithInt:i]];
         }
     } else {
-        for (int i = fromVal; i <= toValue; i--) {
-            [result addObject: [NSString stringWithFormat:@"%d", i]];
+        for (int i = fromVal; i >= toValue; i--) {
+            [result addObject:[NSNumber numberWithInt:i]];
         }
     }
     NSArray *arr = [result copy];
@@ -71,11 +74,12 @@
     NSMutableArray *result = [[NSMutableArray alloc] init];
     NSRange range;
     for (int i = 0; i <[str length]; i++) {
-        range = NSMakeRange(i, i);
+        range = NSMakeRange(i, i+1);
         [result addObject: [str substringWithRange:range]];
     }
     NSArray *arr = [result copy];
     return arr;
+    return nil;
 }
 
 

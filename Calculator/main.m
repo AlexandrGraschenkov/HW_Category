@@ -14,11 +14,12 @@
 int main(int argc, char * argv[])
 {
     @autoreleasepool {
-        NSArray *arr = [[NSArray alloc] initWithObjects:@"1", @"2", @4, @"3", nil];
-        //NSInteger i = [arr countNSStringElements];
-        NSString *str = [arr concatAllStringsInArray];
-        NSLog(@"%@", str);
-        //NSLog(@"%d", i);
+        //NSArray *arr = [[NSArray alloc] initWithObjects:@1, @2, @"4", @"5", nil];
+        NSArray *arr2 = [[NSArray alloc] init];
+        arr2 = [NSArray numbersFrom:10 toValue:8];
+        for (NSNumber *obj in arr2) {
+            NSLog(@"%@ ", obj);
+        }
         return UIApplicationMain(argc, argv, nil, NSStringFromClass([AppDelegate class]));
     }
 }
