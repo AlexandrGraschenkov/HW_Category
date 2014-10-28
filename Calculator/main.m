@@ -16,7 +16,8 @@ int main(int argc, char * argv[])
     @autoreleasepool {
         //NSArray *arr = [[NSArray alloc] initWithObjects:@1, @2, @"4", @"5", nil];
         NSArray *arr2 = [[NSArray alloc] init];
-        arr2 = [NSArray numbersFrom:10 toValue:8];
+        NSString *str = @"abcdef";
+        arr2 = [NSArray charactersInString:str];
         for (NSNumber *obj in arr2) {
             NSLog(@"%@ ", obj);
         }

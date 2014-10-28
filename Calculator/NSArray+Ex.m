@@ -74,7 +74,7 @@
     NSMutableArray *result = [[NSMutableArray alloc] init];
     NSRange range;
     for (int i = 0; i <[str length]; i++) {
-        range = NSMakeRange(i, i+1);
+        range = NSMakeRange(i, 1);
         [result addObject: [str substringWithRange:range]];
     }
     NSArray *arr = [result copy];
