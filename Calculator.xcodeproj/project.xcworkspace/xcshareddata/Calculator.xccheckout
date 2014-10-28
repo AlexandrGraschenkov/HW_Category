@@ -5,36 +5,36 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
-	<string>C4C44F3D-6D19-4970-9FA5-347DBDD669E2</string>
+	<string>FC3C2365-B8E8-47D1-A8AC-57EA67B13647</string>
 	<key>IDESourceControlProjectName</key>
 	<string>Calculator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</key>
-		<string>https://github.com/Sk0rpion/HW_Calculator.git</string>
+		<key>7096C74D-866A-494B-B465-03D4F07922C1</key>
+		<string>https://github.com/mishingena/HW_Category.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>Calculator.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</key>
+		<key>7096C74D-866A-494B-B465-03D4F07922C1</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Sk0rpion/HW_Calculator.git</string>
+	<string>https://github.com/mishingena/HW_Category.git</string>
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</string>
+	<string>7096C74D-866A-494B-B465-03D4F07922C1</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</string>
+			<string>7096C74D-866A-494B-B465-03D4F07922C1</string>
 			<key>IDESourceControlWCCName</key>
-			<string>HW_Calculator</string>
+			<string>HW_Category</string>
 		</dict>
 	</array>
 </dict>
