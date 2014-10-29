@@ -12,8 +12,7 @@
 
 - (NSInteger)countNSStringElements{
     NSInteger result=0;
-    NSUInteger a = [self count];
-    for(int i=0; i<a; i++){
+    for(int i=0; i<[self count]; i++){
         if([[self objectAtIndex:i] isKindOfClass:[NSString class]]){
             result++;
         }
@@ -21,35 +20,29 @@
     return result;
 }
 - (NSString *)concatAllStringsInArray{
-    return [self concatAllStringsInArray];
-    //return [self componentsJoinedByString:@""];
+    NSMutableArray *arr=[[NSMutableArray alloc]init];
+    for (int i=0; i<[self count]; i++) {
+        if([[self objectAtIndex:i] isKindOfClass:[NSString class]]){
+            [arr addObject:[self objectAtIndex:i]];
+        }
+    }
+    return [arr componentsJoinedByString:@""];
 }
 - (NSNumber *)maxNumberInArray{
-    NSNumber *result=[self objectAtIndex:0];
-    BOOL b=false;
-    for(int i=0; i<self.count; i++){
-        if([[self objectAtIndex:i] isKindOfClass:[NSNumber class]]){
-            b=true;
-        }
-    }
+    NSNumber *xmax = [NSNumber numberWithFloat:-MAXFLOAT];
     for (NSNumber *val in self) {
-        if (([val isKindOfClass:[NSNumber class]])&&(result<val)) {
-            result=val;
-        }
+        NSNumber *x = val;
+        if ([x floatValue] > [xmax floatValue]) xmax = x;
     }
-    if (b==true) {
-        return result;
-    } else {
-        return nil;
-    }
+    NSNumber *result = xmax;
+    return result;
 }
 - (NSArray *)substractArray:(NSArray *)arr{
     //Unique elements
-    NSMutableArray *mutableResult;
-    NSInteger index = [self count];
-    for (int i=0;i<index; i++) {
-        if (![self containsObject:[arr objectAtIndex:i]]) {
-            [mutableResult addObject:[arr objectAtIndex:i]];
+    NSMutableArray *mutableResult=[[NSMutableArray alloc]init];
+    for (int i=0; i<[self count]; i++) {
+        if (![arr containsObject:[self objectAtIndex:i]]) {
+            [mutableResult addObject:[self objectAtIndex:i]];
         }
     }
     NSArray *result = [mutableResult copy];
@@ -57,7 +50,7 @@
 }
 + (NSArray *)numbersFrom:(NSInteger)fromVal toValue:(NSInteger)toValue{
     NSInteger range = 0;
-    NSMutableArray *mutableResult=[[NSMutableArray alloc]initWithCapacity:range];
+    NSMutableArray *mutableResult=[[NSMutableArray alloc]init];
     if (fromVal<toValue) {
         range=(toValue-fromVal)+1;
         for (int i=0; i<range; i++) {
@@ -73,12 +66,14 @@
     return result;
 }
 + (NSArray *)charactersInString:(NSString *)str{
-    NSMutableArray *mutableResult = [NSMutableArray array];
+    NSMutableArray *mutableResult = [[NSMutableArray alloc]init];
+    NSString *temp;
     for (int i=0; i<[str length]; i++) {
-        NSString *temp=[str substringWithRange:NSMakeRange(i, 1)];
-        [mutableResult addObject:temp];
+        temp=[str substringWithRange:NSMakeRange(i, 1)];
+        [mutableResult addObject: temp];
     }
     NSArray *result = [mutableResult copy];
+
     return result;
 }
 @end
