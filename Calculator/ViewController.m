@@ -70,7 +70,6 @@
     BOOL characterInStringWorks = YES;
     characterInStringWorks &= [[NSArray charactersInString:@"123"] isEqual:@[@"1", @"2", @"3"]];
     characterInStringWorks &= [[NSArray charactersInString:@"∆∂œ∑"] isEqual:@[@"∆", @"∂", @"œ", @"∑"]];
-    
     return !countStringsWorks + !countStringsWorks + !maxWorks + !substructWorks + !fromToWorks + !characterInStringWorks;
 }
 
