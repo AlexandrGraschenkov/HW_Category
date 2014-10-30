@@ -10,18 +10,6 @@
 
 @implementation NSArray (Ex)
 
-//
-//  NSArray+Ex.m
-//  Calculator
-//
-//  Created by Alexander on 24.10.14.
-//  Copyright (c) 2014 Alexander. All rights reserved.
-//
-
-#import "NSArray+Ex.h"
-
-@implementation NSArray (Ex)
-
 -(NSInteger)countNSStringElements{
         NSInteger count = 0;
         for(int i = 0; i < [self count]; i++)
@@ -115,11 +103,3 @@
 }
 
 @end
-
-
-
-
-
-@end
-
-
