@@ -12,9 +12,9 @@
 
 -(NSInteger)countNSStringElements{
         NSInteger count = 0;
-        for(int i = 0; i < [self count]; i++)
+        for(NSString *string in self)
         {
-            if([[self objectAtIndex:i] isKindOfClass:[NSString class]])
+            if([string isKindofClass: [NSString class]])
             {
                 count++;
             }
@@ -23,12 +23,10 @@
     }
 
 - (NSString *)concatAllStringsInArray{
-    
-    NSString *s = @"";
-    
-    for (int i=0; i < [self count]; i++) {
-                if([[self objectAtIndex:i] isKindOfClass:[NSString class]]){
-                        s = [s stringByAppendingString:[self objectAtIndex:i]];
+        NSMutableString *s = [NSMutableString new]
+      for (NSString *string in self) {
+                if([string isKindOfClass: [NSString class]]){
+                        s = [s stringByAppendingString:string];
                     }
             }
         return s;
@@ -43,50 +41,50 @@
     
     NSNumber *max = [self objectAtIndex:0];
     
-    for (NSNumber *val in self) {
+    for (NSNumber *value in self) {
     
-        if ([val floatValue] > [max floatValue]) max = val;
+        if ([value floatValue] > [max floatValue]){
+        max = value;
         }
+      }
     return max;
     }
 
 - (NSArray *)substractArray:(NSArray *)arr{
     
-        NSMutableArray *ss=[[NSMutableArray
-                             alloc]init];
-        for (int i = 0; i < [self count]; i++) {
-                if (![arr containsObject:[self objectAtIndex:i]]) {
-                    [ss addObject:[self objectAtIndex:i]];
+        NSMutableArray *array=[[NSMutableArray alloc]init];
+        for (id object in self) {
+                if (![arr containsObject:object]) {
+                    [array addObject:object];
                 }
             }
     
-        return ss;
+        return array;
     }
 
 
 
  +(NSArray *)numbersFrom:(NSInteger)fromVal toValue:(NSInteger)toValue{
      
-     NSInteger begin = toValue;
-     NSMutableArray *ss = [[NSMutableArray alloc]init];
+      NSMutableArray *array = [[NSMutableArray alloc]init];
      
      if (fromVal < toValue) {
          for(NSInteger i = fromVal; i <= toValue; i++)
          {
-             [ss addObject: [NSNumber numberWithLong: i]];
+             [array addObject: [[NSNumber alloc] initWithLong: i];
          }
          
      } else {
          for(NSInteger i = fromVal; i >= toValue; i--)
          {
-             [ss addObject: [NSNumber numberWithLong: i]];
+             [array addObject: [[NSNumber alloc] initWithLong: i];
          }
          
      }
      
      
      
-     return ss;
+     return array;
 }
 
 +(NSArray *)charactersInString:(NSString *)str
