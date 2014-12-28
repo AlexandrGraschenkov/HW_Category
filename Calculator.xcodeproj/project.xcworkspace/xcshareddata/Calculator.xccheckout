@@ -10,31 +10,31 @@
 	<string>Calculator</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
-		<key>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</key>
-		<string>https://github.com/Sk0rpion/HW_Calculator.git</string>
+		<key>F79EC1D2E58824AEFA6AD961B17F7306AA794C21</key>
+		<string>https://github.com/ifklid90/HW_Category.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>Calculator.xcodeproj/project.xcworkspace</string>
+	<string>Calculator.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
-		<key>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</key>
+		<key>F79EC1D2E58824AEFA6AD961B17F7306AA794C21</key>
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
-	<string>https://github.com/Sk0rpion/HW_Calculator.git</string>
+	<string>https://github.com/ifklid90/HW_Category.git</string>
 	<key>IDESourceControlProjectVersion</key>
-	<integer>110</integer>
+	<integer>111</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
-	<string>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</string>
+	<string>F79EC1D2E58824AEFA6AD961B17F7306AA794C21</string>
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
-			<string>257F6F62-2DA6-4FA9-9F6C-D3A87B255289</string>
+			<string>F79EC1D2E58824AEFA6AD961B17F7306AA794C21</string>
 			<key>IDESourceControlWCCName</key>
-			<string>HW_Calculator</string>
+			<string>HW_Category</string>
 		</dict>
 	</array>
 </dict>
